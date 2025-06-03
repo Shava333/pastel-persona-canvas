@@ -9,6 +9,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
 import BackgroundAnimation from "../components/BackgroundAnimation";
+import CustomCursor from "../components/CustomCursor";
 
 const Index = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -23,7 +24,8 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-lavender-50/30 to-mint-50/30 relative">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-lavender-50/30 to-mint-50/30 relative cursor-none">
+      <CustomCursor />
       <BackgroundAnimation />
       
       <div className="relative z-10">

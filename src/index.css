@@ -49,10 +49,12 @@
 @layer base {
   * {
     @apply border-border;
+    cursor: none !important;
   }
 
   html {
     scroll-behavior: smooth;
+    cursor: none !important;
   }
 
   body {
@@ -60,6 +62,11 @@
     background: linear-gradient(135deg, #fcfcff 0%, #f8f7ff 50%, #f0fdf9 100%);
     min-height: 100vh;
     overflow-x: hidden;
+    cursor: none !important;
+  }
+
+  button, a, [role="button"] {
+    cursor: none !important;
   }
 }
 

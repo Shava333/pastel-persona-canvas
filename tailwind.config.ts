@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -151,12 +152,62 @@ export default {
 						transform: 'translateY(-10px)'
 					}
 				},
+				'float-slow': {
+					'0%, 100%': {
+						transform: 'translateY(0px) translateX(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-15px) translateX(5px)'
+					}
+				},
+				'float-medium': {
+					'0%, 100%': {
+						transform: 'translateY(0px) translateX(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-12px) translateX(-8px)'
+					}
+				},
+				'float-fast': {
+					'0%, 100%': {
+						transform: 'translateY(0px) translateX(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-8px) translateX(10px)'
+					}
+				},
+				'float-vertical': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-20px)'
+					}
+				},
+				'float-horizontal': {
+					'0%, 100%': {
+						transform: 'translateX(0px)'
+					},
+					'50%': {
+						transform: 'translateX(15px)'
+					}
+				},
 				'pulse-glow': {
 					'0%, 100%': {
 						opacity: '0.8'
 					},
 					'50%': {
 						opacity: '1'
+					}
+				},
+				'pulse-particle': {
+					'0%, 100%': {
+						opacity: '0.4',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '1',
+						transform: 'scale(1.2)'
 					}
 				},
 				'wiggle': {
@@ -186,6 +237,62 @@ export default {
 						transform: 'translateX(0)',
 						opacity: '1'
 					}
+				},
+				'wave-horizontal': {
+					'0%': {
+						transform: 'translateX(-100%)'
+					},
+					'100%': {
+						transform: 'translateX(100vw)'
+					}
+				},
+				'wave-horizontal-reverse': {
+					'0%': {
+						transform: 'translateX(100%)'
+					},
+					'100%': {
+						transform: 'translateX(-100vw)'
+					}
+				},
+				'wave-vertical': {
+					'0%': {
+						transform: 'translateY(-100%)'
+					},
+					'100%': {
+						transform: 'translateY(100vh)'
+					}
+				},
+				'wave-vertical-reverse': {
+					'0%': {
+						transform: 'translateY(100%)'
+					},
+					'100%': {
+						transform: 'translateY(-100vh)'
+					}
+				},
+				'orbit': {
+					'0%': {
+						transform: 'rotate(0deg) translateX(30px) rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg) translateX(30px) rotate(-360deg)'
+					}
+				},
+				'orbit-reverse': {
+					'0%': {
+						transform: 'rotate(360deg) translateX(25px) rotate(-360deg)'
+					},
+					'100%': {
+						transform: 'rotate(0deg) translateX(25px) rotate(0deg)'
+					}
+				},
+				'grid-shift': {
+					'0%, 100%': {
+						transform: 'translate(0, 0)'
+					},
+					'50%': {
+						transform: 'translate(30px, 30px)'
+					}
 				}
 			},
 			animation: {
@@ -195,10 +302,23 @@ export default {
 				'fade-in-up': 'fade-in-up 0.8s ease-out',
 				'scale-in': 'scale-in 0.4s ease-out',
 				'float': 'float 3s ease-in-out infinite',
+				'float-slow': 'float-slow 4s ease-in-out infinite',
+				'float-medium': 'float-medium 3.5s ease-in-out infinite',
+				'float-fast': 'float-fast 2.5s ease-in-out infinite',
+				'float-vertical': 'float-vertical 2s ease-in-out infinite',
+				'float-horizontal': 'float-horizontal 3s ease-in-out infinite',
 				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'pulse-particle': 'pulse-particle 1.5s ease-in-out infinite',
 				'wiggle': 'wiggle 1s ease-in-out infinite',
 				'slide-in-left': 'slide-in-left 0.5s ease-out',
-				'slide-in-right': 'slide-in-right 0.5s ease-out'
+				'slide-in-right': 'slide-in-right 0.5s ease-out',
+				'wave-horizontal': 'wave-horizontal 8s linear infinite',
+				'wave-horizontal-reverse': 'wave-horizontal-reverse 10s linear infinite',
+				'wave-vertical': 'wave-vertical 12s linear infinite',
+				'wave-vertical-reverse': 'wave-vertical-reverse 9s linear infinite',
+				'orbit': 'orbit 15s linear infinite',
+				'orbit-reverse': 'orbit-reverse 12s linear infinite',
+				'grid-shift': 'grid-shift 20s ease-in-out infinite'
 			}
 		}
 	},
