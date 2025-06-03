@@ -8,6 +8,7 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import BackToTop from "../components/BackToTop";
+import BackgroundAnimation from "../components/BackgroundAnimation";
 
 const Index = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -22,20 +23,24 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-lavender-50/30 to-mint-50/30">
-      <Navbar />
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-lavender-50/30 to-mint-50/30 relative">
+      <BackgroundAnimation />
       
-      <main className="relative">
-        <Hero />
-        <About />
-        <Technologies />
-        <Projects />
-        <Contact />
-      </main>
-      
-      <Footer />
-      
-      {showBackToTop && <BackToTop />}
+      <div className="relative z-10">
+        <Navbar />
+        
+        <main className="relative">
+          <Hero />
+          <About />
+          <Technologies />
+          <Projects />
+          <Contact />
+        </main>
+        
+        <Footer />
+        
+        {showBackToTop && <BackToTop />}
+      </div>
     </div>
   );
 };

@@ -59,6 +59,7 @@
     @apply bg-background text-foreground font-inter;
     background: linear-gradient(135deg, #fcfcff 0%, #f8f7ff 50%, #f0fdf9 100%);
     min-height: 100vh;
+    overflow-x: hidden;
   }
 }
 
@@ -78,5 +79,26 @@
   .interactive-glow {
     @apply transition-all duration-300 hover:shadow-2xl hover:shadow-lavender-200/40;
   }
-}
 
+  .animated-background {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .animated-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 40%, rgba(139, 92, 246, 0.02) 50%, transparent 60%);
+    animation: shimmer 3s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+}
