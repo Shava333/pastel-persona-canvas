@@ -74,4 +74,9 @@
   .glass-card {
     @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg shadow-lavender-100/50;
   }
+
+  .interactive-glow {
+    @apply transition-all duration-300 hover:shadow-2xl hover:shadow-lavender-200/40;
+  }
 }
+

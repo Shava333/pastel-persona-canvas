@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -159,6 +158,34 @@ export default {
 					'50%': {
 						opacity: '1'
 					}
+				},
+				'wiggle': {
+					'0%, 100%': {
+						transform: 'rotate(-3deg)'
+					},
+					'50%': {
+						transform: 'rotate(3deg)'
+					}
+				},
+				'slide-in-left': {
+					'0%': {
+						transform: 'translateX(-100%)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateX(0)',
+						opacity: '1'
+					}
+				},
+				'slide-in-right': {
+					'0%': {
+						transform: 'translateX(100%)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateX(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
@@ -168,7 +195,10 @@ export default {
 				'fade-in-up': 'fade-in-up 0.8s ease-out',
 				'scale-in': 'scale-in 0.4s ease-out',
 				'float': 'float 3s ease-in-out infinite',
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'wiggle': 'wiggle 1s ease-in-out infinite',
+				'slide-in-left': 'slide-in-left 0.5s ease-out',
+				'slide-in-right': 'slide-in-right 0.5s ease-out'
 			}
 		}
 	},
